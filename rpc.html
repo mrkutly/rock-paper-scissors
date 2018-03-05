@@ -3,11 +3,11 @@
 <script>
 
 var myArray = ["rock", "paper", "scissors"];
-let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
-const computerSelection = computerPlay;
-const playerSelection = prompt("Rock, paper, or scissors?", "");
 
 function playRound(){
+  let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
+  const computerSelection = computerPlay;
+  const playerSelection = prompt("Rock, paper, or scissors?", "");
   if (playerSelection === "rock" && computerSelection === "scissors"){
     return "you win! rock beats scissors!"
   } else if (playerSelection === "rock" && computerSelection === "paper"){
@@ -27,6 +27,14 @@ function playRound(){
   } else if (playerSelection === "scissors" && computerSelection === "scissors"){
     return "tie!"
   }
+}
+
+function game(){
+  playRound();
+  playRound();
+  playRound();
+  playRound();
+  playRound();
 }
 
 </script>
