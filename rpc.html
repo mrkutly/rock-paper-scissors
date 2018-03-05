@@ -1,7 +1,12 @@
 !<!DOCTYPE html>
 <html>
 <script>
-// playRound I think is set up right, but the variables come back undefined
+
+var myArray = ["rock", "paper", "scissors"];
+let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
+const computerSelection = computerPlay;
+const playerSelection = prompt("Rock, paper, or scissors?", "");
+
 function playRound(playerSelection, computerSelection){
   if (playerSelection == "rock", computerSelection == "scissors"){
     return "you win! rock beats scissors!"
@@ -23,11 +28,8 @@ function playRound(playerSelection, computerSelection){
     return "tie!"
   }
 }
-// computerPlay works, but the prompted info is not being stored?
-var myArray = ["rock", "paper", "scissors"];
-let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
-var computerSelection = computerPlay;
-var playerSelection = prompt("Rock, paper, or scissors?", "");
+
+
 
 
 
