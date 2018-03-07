@@ -1,33 +1,48 @@
 var myArray = ["rock", "paper", "scissors"];
-var e;
-document.getElementById('#rock').addEventListener("click", playRound(rock));
-document.getElementById('#paper').addEventListener("click", playRound(paper));
-document.getElementById('#scissors').addEventListener("click", playRound(scissors));
+var btnrock = document.querySelector("#btnrock");
+var btnpaper = document.querySelector("#btnpaper");
+var btnscissors = document.querySelector("#btnscissors");
+var results = document.querySelector(".results");
 
 function playRound(e){
   const playerSelection = e
   let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
   const computerSelection = computerPlay;
   if (playerSelection === "rock" && computerSelection === "scissors"){
-      return "you win! rock beats scissors!"
+      var result = "you win! rock beats scissors!";
+      results.textContent = result;
   } else if (playerSelection === "rock" && computerSelection === "paper"){
-      return "you lose! paper beats rock!"
+      var result = "you lose! paper beats rock!";
+      results.textContent = result;
   } else if (playerSelection === "rock" && computerSelection === "rock"){
-      return "tie!"
+      var result = "tie!";
+      results.textContent = result;
   } else if (playerSelection === "paper" && computerSelection === "rock"){
-      return "you win! paper beats rock!"
+      var result = "you win! paper beats rock!";
+      results.textContent = result;
   } else if (playerSelection === "paper" && computerSelection === "scissors"){
-      return "you lose! scissors beats paper!"
+      var result = "you lose! scissors beats paper!";
+      results.textContent = result;
   } else if (playerSelection === "paper" && computerSelection === "paper"){
-      return "tie!"
+      var result = "tie!";
+      results.textContent = result;
   } else if (playerSelection === "scissors" && computerSelection === "paper"){
-      return "you win! scissors beats paper!"
+      var result = "you win! scissors beats paper!";
+      results.textContent = result;
   } else if (playerSelection === "scissors" && computerSelection === "rock"){
-      return "you lose! rock beats scissors!"
+      var result = "you lose! rock beats scissors!";
+      results.textContent = result;
   } else if (playerSelection === "scissors" && computerSelection === "scissors"){
-      return "tie!"
+      var result = "tie!"
+      results.textContent = result;
   }
 }
+
+btnrock.addEventListener("click", () => {playRound("rock");});
+btnpaper.addEventListener("click", () => {playRound("paper");});
+btnscissors.addEventListener("click", () => {playRound("scissors");});
+
+
 
 
 // maybe i need to write "let i = 0"
