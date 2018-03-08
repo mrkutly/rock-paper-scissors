@@ -43,15 +43,3 @@ function playRound(e){
 btnrock.addEventListener("click", () => {playRound("rock");});
 btnpaper.addEventListener("click", () => {playRound("paper");});
 btnscissors.addEventListener("click", () => {playRound("scissors");});
-
-
-
-
-
-// maybe i need to write "let i = 0"
-//the loop is running for 5 iterations, but is not returning the results of each round
-//function game(){
-//  for (i=0; i < 5; i++){
-//    playRound();
-//  }
-//}
