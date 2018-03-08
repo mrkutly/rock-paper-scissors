@@ -7,7 +7,6 @@ var score = document.querySelector(".score");
 var winner = document.querySelector(".winner");
 var playerScore = 0;
 var computerScore = 0;
-var buttons = document.querySelector("button");
 score.textContent = "You: 0 | Computer: 0";
 
 function playRound(e){
@@ -39,6 +38,7 @@ function playRound(e){
     computerScore = 0;
   }
 }
+
 
 btnrock.addEventListener("click", () => {playRound("rock");});
 btnpaper.addEventListener("click", () => {playRound("paper");});

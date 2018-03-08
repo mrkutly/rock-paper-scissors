@@ -7,7 +7,7 @@ h1{
   font-size: 6em;
   text-align: center;
   color: white;
-  text-shadow: white 2px 0 10px;
+  text-shadow: #fa0 2px 0 10px;
   background-color: black;
 }
 button{
@@ -18,9 +18,11 @@ button{
 }
 p{
   text-align: center;
+  font-size: 1.5em;
 }
 h3{
   text-align: center;
+  font-size: 2.5em;
 }
 .buttons{
   width: 616px;
@@ -34,6 +36,14 @@ h3{
   font-size: 2em;
 }
 .results{
+  height: 2.3em;
   font-size:2.3em;
   text-shadow: #fa0 1px 0 10px;
+}
+.winner{
+  height: 2.6em;
+  text-align: center;
+  color: #72138e;
+  font-size: 2.6em;
+  text-shadow: #0014ff 2px 0 10px;
 }
