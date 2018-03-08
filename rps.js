@@ -5,9 +5,10 @@ var btnscissors = document.querySelector("#btnscissors");
 var results = document.querySelector(".results");
 var score = document.querySelector(".score");
 var winner = document.querySelector(".winner");
-var playerScore = 0
-var computerScore = 0
-score.textContent = "You: 0 | Computer: 0"
+var playerScore = 0;
+var computerScore = 0;
+var buttons = document.querySelector("button");
+score.textContent = "You: 0 | Computer: 0";
 
 function playRound(e){
   winner.textContent = "";
