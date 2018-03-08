@@ -4,12 +4,14 @@ var btnpaper = document.querySelector("#btnpaper");
 var btnscissors = document.querySelector("#btnscissors");
 var results = document.querySelector(".results");
 var score = document.querySelector(".score");
+var winner = document.querySelector(".winner");
 var playerScore = 0
 var computerScore = 0
 score.textContent = "You: 0 | Computer: 0"
 
 function playRound(e){
-  const playerSelection = e
+  winner.textContent = "";
+  const playerSelection = e;
   let computerPlay = myArray[Math.floor(Math.random()*myArray.length)];
   const computerSelection = computerPlay;
   if (playerSelection === "rock" && computerSelection === "scissors" ||
@@ -26,6 +28,15 @@ function playRound(e){
       var result = "tie!";
   } results.textContent = result;
   score.textContent = "You: " + playerScore + " | Computer: " + computerScore;
+  if(playerScore === 5){
+    winner.textContent = "YOU HAVE BEATEN THE MACHINE";
+    playerScore = 0;
+    computerScore = 0;
+  } else if(computerScore === 5){
+    winner.textContent = "COMPUTER IS VICTORIOUS";
+    playerScore = 0;
+    computerScore = 0;
+  }
 }
 
 btnrock.addEventListener("click", () => {playRound("rock");});
